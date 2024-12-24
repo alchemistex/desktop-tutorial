@@ -58,6 +58,13 @@
         .back-button:hover {
             background-color: #0056b3;
         }
+        .flex-group {
+            display: flex;
+            gap: 10px;
+        }
+        .flex-group input {
+            width: calc(50% - 5px);
+        }
     </style>
 </head>
 <body>
@@ -72,22 +79,49 @@
             <input type="time" id="end-time">
         </div>
         <div class="form-group">
-            <label for="break-time">休憩時間 (時間単位, 例: 1.25)</label>
-            <input type="number" id="break-time" step="0.01">
+            <label>休憩時間</label>
+            <div class="flex-group">
+                <input type="number" id="break-time-hours" step="0.01" placeholder="時間 (例: 1.25)">
+                <input type="number" id="break-time-minutes" placeholder="分 (例: 75)">
+            </div>
         </div>
-        <button onclick="calculateWorkTime()">計算する</button>
         <div class="result" id="result"></div>
         <button class="back-button" onclick="goToIndex()">トップページに戻る</button>
     </div>
 
     <script>
+        const breakTimeHoursInput = document.getElementById('break-time-hours');
+        const breakTimeMinutesInput = document.getElementById('break-time-minutes');
+        const startTimeInput = document.getElementById('start-time');
+        const endTimeInput = document.getElementById('end-time');
+        const resultElement = document.getElementById('result');
+
+        breakTimeHoursInput.addEventListener('input', () => {
+            const hours = parseFloat(breakTimeHoursInput.value);
+            if (!isNaN(hours)) {
+                breakTimeMinutesInput.value = (hours * 60).toFixed(0);
+            }
+            calculateWorkTime();
+        });
+
+        breakTimeMinutesInput.addEventListener('input', () => {
+            const minutes = parseFloat(breakTimeMinutesInput.value);
+            if (!isNaN(minutes)) {
+                breakTimeHoursInput.value = (minutes / 60).toFixed(2);
+            }
+            calculateWorkTime();
+        });
+
+        startTimeInput.addEventListener('input', calculateWorkTime);
+        endTimeInput.addEventListener('input', calculateWorkTime);
+
         function calculateWorkTime() {
-            const startTime = document.getElementById('start-time').value;
-            const endTime = document.getElementById('end-time').value;
-            const breakTime = parseFloat(document.getElementById('break-time').value);
+            const startTime = startTimeInput.value;
+            const endTime = endTimeInput.value;
+            const breakTime = parseFloat(breakTimeHoursInput.value);
 
             if (!startTime || !endTime || isNaN(breakTime)) {
-                document.getElementById('result').textContent = '全てのフィールドを正しく入力してください。';
+                resultElement.textContent = '実労働時間: [--.--]';
                 return;
             }
 
@@ -103,8 +137,8 @@
             const hours = Math.floor(actualWorkTime);
             const minutes = Math.round((actualWorkTime - hours) * 60);
 
-            document.getElementById('result').textContent = 
-                `実労働時間: ${hours}時間${minutes}分`;
+            resultElement.textContent = 
+                `実労働時間: [${hours}.${minutes}]`;
         }
 
         function goToIndex() {
