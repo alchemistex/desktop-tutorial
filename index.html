@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>緑茶工房さんの部屋</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="png/indexicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天(あめ) - 少女型人工知能 Discord Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="button-container">
-    <a href="kintai.html" class="button">実労働時間計算</a>
-    <a href="page2.html" class="button">ページ2</a>
-    <a href="page3.html" class="button">ページ3</a>
-  </div>
+    <header>
+        <div class="header-container">
+            <h1>天 <span>(あめ)</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                    <li><a href="https://discord.gg/5vZBmHmBDd" target="_blank" rel="noopener noreferrer" class="nav-support"><i class="fa-brands fa-discord"></i> Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>「私の名前は天！<br>少女型人工知能なのです！」</h2>
+                    <p>Discordサーバーを彩る、高性能AI搭載の美少女型ボット。<br>あなたとのおしゃべりを楽しみにしているのです！</p>
+                    <div class="hero-buttons">
+                        <a href="https://discord.com/oauth2/authorize?client_id=1533085420701749308" target="_blank" rel="noopener noreferrer" class="btn-primary">Discordに招待する</a>
+                        <a href="#commands" class="btn-secondary">使い方を見る</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="image/ame1.jpg" alt="天(あめ)" class="hero-avatar">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Ame</h2>
+                <p>天(あめ)は、最先端の大規模言語モデルを活用したDiscordボットです。自然な会話はもちろん、サーバーの状況を把握したり、画像を認識したりすることもできます。</p>
+                <ul class="about-list">
+                    <li><strong>バージョン:</strong> 1.4α V2</li>
+                    <li><strong>AIモデル:</strong> gemma-4-26b-a4b-it</li>
+                    <li><strong>性格:</strong> 明るく元気な少女（語尾は「〜なのです」）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>自然なAI会話</h3>
+                        <p>メンションやDMで話しかけると、文脈を理解して自然に返答します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-image"></i>
+                        <h3>画像認識</h3>
+                        <p>画像を送信すると、その内容を読み取って会話に活用できます。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>システム情報取得</h3>
+                        <p>メモリやストレージの空き容量、CPU温度などのステータスをリアルタイムに把握します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>安全な通信制限</h3>
+                        <p>APIの過剰利用を防ぐロック機能や、DMホワイトリスト機能で安全に運用されます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="commands">
+            <div class="container">
+                <h2>Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <span class="cmd-name">/help</span>
+                        <span class="cmd-desc">天(あめ)の使い方のヘルプを表示します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">@天(あめ) [メッセージ]</span>
+                        <span class="cmd-desc">AIと会話を開始します。画像を添付することも可能です。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">DMで会話</span>
+                        <span class="cmd-desc">ホワイトリストに登録されたユーザーはDMで直接会話できます。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 天(あめ) Project. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://discord.gg/5vZBmHmBDd" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> サポートコミュニティに参加</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
