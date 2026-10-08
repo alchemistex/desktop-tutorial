@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幼馴染ちゃん - Discord Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>幼馴染ちゃん</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html"><i class="fa-solid fa-house"></i> TOP</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                    <li><a href="https://discord.gg/5vZBmHmBDd" target="_blank" rel="noopener noreferrer" class="nav-support"><i class="fa-brands fa-discord"></i> Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>「いつも一緒にいるよ！<br>あなたの幼馴染AIです！」</h2>
+                    <p>Discordサーバーを彩る、幼馴染型ボット。<br>あなたとのおしゃべりを楽しみにしているよ！</p>
+                    <div class="hero-buttons">
+                        <a href="https://discord.com/oauth2/authorize?client_id=1491045630741577819" target="_blank" rel="noopener noreferrer" class="btn-primary">Discordに招待する</a>
+                        <a href="#commands" class="btn-secondary">使い方を見る</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="image/osananajimi1.png" alt="幼馴染ちゃん" class="hero-avatar">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About 幼馴染ちゃん</h2>
+                <p>幼馴染ちゃんは、サーバーの管理や情報収集を優しく手伝ってくれる多機能Discordボットです。匿名チャット、YouTube急上昇ランキング配信、認証付きロールパネルなど、コミュニティを盛り上げる便利な機能がたくさん詰まっています。</p>
+                <ul class="about-list">
+                    <li><strong>バージョン:</strong> 4.4</li>
+                    <li><strong>主な機能:</strong> 匿名チャット、各種パネル作成、自動情報配信など</li>
+                    <li><strong>コンセプト:</strong> あなたの幼馴染としてサーバーを優しくサポート</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-user-secret"></i>
+                        <h3>匿名チャット機能</h3>
+                        <p>専用のパネルからWebhookを使って匿名で書き込みが可能。直近の自分のメッセージは削除もできる安心設計です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <h3>自動ニュース＆ランキング</h3>
+                        <p>PC関連ニュースのRSS自動配信や、YouTube急上昇ランキングTOP10を定期的に自動でお届けします。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>便利なサーバー管理</h3>
+                        <p>4桁の認証コード付きロール付与パネルや、暴言ブロック機能などでコミュニティの安全を守ります。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <h3>自動リアクション＆テンプレ</h3>
+                        <p>特定のキーワードに自動でリアクションを付けたり、よく使う定型文（テンプレート）を設置したりできます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="commands">
+            <div class="container">
+                <h2>Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <span class="cmd-name">/help</span>
+                        <span class="cmd-desc">ヘルプを表示します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/tokumeichat</span>
+                        <span class="cmd-desc">このチャンネルに匿名チャットの書き込みパネルを表示します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/anonymous_msg</span>
+                        <span class="cmd-desc">匿名でメッセージを送信します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/anonymous_msg_on_off</span>
+                        <span class="cmd-desc">anonymous_msgコマンドの有効/無効を切り替えます。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/createpanel</span>
+                        <span class="cmd-desc">指定したロールのロールパネルを作成します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/authentication_panel</span>
+                        <span class="cmd-desc">認証パネルを作成します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/joinlogset</span>
+                        <span class="cmd-desc">ユーザーが参加するとウェルカムメッセージを送信します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/left_notification</span>
+                        <span class="cmd-desc">即抜け通知を有効にします。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/auto_pcnews</span>
+                        <span class="cmd-desc">PC関連のニュースを配信します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/youtube_top10</span>
+                        <span class="cmd-desc">YouTubeの急上昇ランキングを10位まで表示します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/youtube_top10auto</span>
+                        <span class="cmd-desc">YouTubeの急上昇ランキングを1時間に1回自動送信します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/anime-list</span>
+                        <span class="cmd-desc">保存されているアニメリストを表示します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/msgreaction</span>
+                        <span class="cmd-desc">BOTがメッセージ内容に合わせてリアクションを付けてくれます。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/msgtemplate</span>
+                        <span class="cmd-desc">指定したチャンネルにメッセージテンプレートを送信します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/msgtemplatedel</span>
+                        <span class="cmd-desc">コマンドを実行したチャンネルのテンプレートを削除します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/chatspeed</span>
+                        <span class="cmd-desc">チャンネルの低速モードの設定をします。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/short_url</span>
+                        <span class="cmd-desc">URLを短縮します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/msgdel</span>
+                        <span class="cmd-desc">メッセージを指定数分削除します。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/bougen_block</span>
+                        <span class="cmd-desc">このチャンネルでの暴言をブロックします。</span>
+                    </div>
+                    <div class="command-item">
+                        <span class="cmd-name">/memoryreset</span>
+                        <span class="cmd-desc">BOTが持っているサーバー内のあなたの記憶を削除します。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 幼馴染ちゃん Project. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://discord.gg/5vZBmHmBDd" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> サポートコミュニティに参加</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
